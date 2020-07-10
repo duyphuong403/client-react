@@ -1,26 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Navbar from './2.components/0.common/navigation';
+import GlobalStyle from "./2.components/0.common/globalStyle";
 
-function App() {
+export default () => {
+  // Shouldn't connect store from App due to it will change state so it will re-render with infinity  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <GlobalStyle/>
+      <Navbar />
     </div>
   );
 }
-
-export default App;
